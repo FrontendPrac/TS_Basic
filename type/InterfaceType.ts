@@ -1,5 +1,5 @@
 // interfacr alias(인터페이스 별칭) : 타입과 유사하다. 타입과 차이점은 확장이 가능하다는 점이다.
-// 다양한 것들의 정의하기 위해서 사용한다.
+// 프로퍼티를 정의해서 객체를 사용하고자할때 사용한다.
 
 // 기본 정의
 interface Person {
@@ -11,7 +11,7 @@ const person1: Person = { name: "ts", age: 20 };
 // const person2: Person = { name: "ts" };  // Property is missing in type '{ name: string }' but required in type 'Person'.
 // const person3: Person = { name: "js", age: "10" };  // Type 'string' is not assignable to type 'number'.
 
-// 선택 속성
+// 선택 속성 : 옵셔널 체이닝(?)
 interface Person2 {
   name: string;
   age?: number;
