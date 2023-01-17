@@ -1,5 +1,6 @@
-// interfacr alias(인터페이스 별칭) : 인터페이스를 재사용 할 수 있다.
+// interfacr alias(인터페이스 별칭) : 타입과 유사하다. 타입과 차이점은 확장이 가능하다는 점이다.
 // 다양한 것들의 정의하기 위해서 사용한다.
+
 // 기본 정의
 interface Person {
   name: string;
@@ -53,4 +54,34 @@ const getNameAndAge: Print = (name, age) => {
   return `name: ${name}, age: ${age}`;
 };
 
-console.log(getNameAndAge("kidongg", 20));  // name: kidongg, age: 20
+console.log(getNameAndAge("kidongg", 20)); // name: kidongg, age: 20
+
+// 인터페이스는 확장이 가능하다 : extend
+interface Person8 {
+  name: string;
+  age: number;
+}
+
+interface Korean extends Person8 {
+  birth: "KOR";
+}
+
+// interfacr Korean {
+//   name: string;
+//   age: number;
+//   birth: "KOR";
+// }
+
+// 여러개 인터페이스 확장도 가능하다
+interface Developer {
+  job: "developer";
+}
+
+interface KorAndDev extends Korean, Developer {}
+
+// interface KorAndDev {
+//   name: string;
+//   age: number;
+//   birth: "KOR";
+//   job: "developer";
+// }
