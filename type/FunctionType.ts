@@ -48,9 +48,10 @@ function printResult(num: number): void {
 // printResult(2);  // 2
 
 // optional parameter
-// 함수를 선언했을 때, 필수적으로 받아오지 않아도 되는 파라미터가 있다면, 
+// 함수를 선언했을 때, 필수적으로 받아오지 않아도 되는 파라미터가 있다면,
 // '?'를 사용하여 옵셔널로 지정할 수 있다.
 // 해당 데이터 타입이 아닐 경우 undefinded를 리턴한다.
+// 필수 매개변수는 선택적 매개변수보다 앞에 와야한다.
 function add5(n1: number, n2?: number) {
   if (!n2) return n1;
   return n1 + n2;
