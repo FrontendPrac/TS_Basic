@@ -46,3 +46,14 @@ enum Direction4 {
   No = 0,
   Yes = "YES",
 }
+
+// 특정 값만 입력하도록 강제 하고 싶을 때, 그 값들이 공통점이 있을때 사용한다.
+enum Os {
+  Window = "win",
+  Ios = "ios",
+  Android = "and",
+}
+
+let myOs: Os;
+
+myOs = Os.Window
